@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Zhaoyuan Xia is an AI researcher working on long-context reasoning, LLM post-training, and reliable AI systems.">
+    <meta name="theme-color" content="#172033">
+    <meta property="og:title" content="Zhaoyuan Xia | AI Researcher">
+    <meta property="og:description" content="Researching long-context reasoning, LLM post-training, AI agents, and reliable AI systems.">
+    <meta property="og:image" content="https://x-luffy.github.io/images/profile.jpg">
+    <meta property="og:url" content="https://x-luffy.github.io/">
     <title>Zhaoyuan Xia | AI Researcher</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,8 +16,8 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">Zhaoyuan Xia <span>夏照源</span></a>
-            <ul class="nav-menu">
+            <a href="#home" class="nav-logo" aria-label="Zhaoyuan Xia home">Zhaoyuan Xia <span>夏照源</span></a>
+            <ul id="primary-navigation" class="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#research" class="nav-link">Research</a></li>
                 <li><a href="#publications" class="nav-link">Publications</a></li>
@@ -21,7 +26,7 @@
                 <li><a href="#honors" class="nav-link">Honors</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <button class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false">
+            <button class="hamburger" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -29,7 +34,8 @@
         </div>
     </nav>
 
-    <main>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <main id="main-content">
         <section id="home" class="hero">
             <div class="hero-content">
                 <div class="hero-text">
@@ -389,18 +395,26 @@
     <script>
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
+        const navLinks = [...document.querySelectorAll('.nav-link')];
+        const sections = [...document.querySelectorAll('main section[id]')];
+
+        const closeMenu = () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.setAttribute('aria-label', 'Open navigation menu');
+        };
 
         hamburger.addEventListener('click', () => {
             const isOpen = hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
             hamburger.setAttribute('aria-expanded', String(isOpen));
+            hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
         });
 
-        document.querySelectorAll('.nav-link').forEach((link) => {
+        navLinks.forEach((link) => {
             link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
+                closeMenu();
             });
         });
 
@@ -409,12 +423,51 @@
                 const target = document.querySelector(anchor.getAttribute('href'));
                 if (!target) return;
                 event.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                target.scrollIntoView({
+                    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+                    block: 'start'
+                });
             });
         });
 
+        document.addEventListener('click', (event) => {
+            if (!navMenu.contains(event.target) && !hamburger.contains(event.target)) {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeMenu();
+                hamburger.focus();
+            }
+        });
+
+        const updateActiveSection = (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                navLinks.forEach((link) => {
+                    link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+                });
+            });
+        };
+
+        if ('IntersectionObserver' in window) {
+            const sectionObserver = new IntersectionObserver(updateActiveSection, {
+                rootMargin: '-25% 0px -65% 0px',
+                threshold: 0
+            });
+            sections.forEach((section) => sectionObserver.observe(section));
+        }
+
+        let lastScrolledState = window.scrollY > 20;
+        document.querySelector('.navbar').classList.toggle('scrolled', lastScrolledState);
         window.addEventListener('scroll', () => {
-            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 20);
+            const isScrolled = window.scrollY > 20;
+            if (isScrolled !== lastScrolledState) {
+                document.querySelector('.navbar').classList.toggle('scrolled', isScrolled);
+                lastScrolledState = isScrolled;
+            }
         });
     </script>
 </body>
