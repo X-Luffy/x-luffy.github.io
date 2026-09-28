@@ -3,375 +3,418 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhaoyuan Xia - Academic Homepage</title>
+    <meta name="description" content="Zhaoyuan Xia is an AI researcher working on long-context reasoning, LLM post-training, and reliable AI systems.">
+    <title>Zhaoyuan Xia | AI Researcher</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">Zhaoyuan Xia</a>
+            <a href="#home" class="nav-logo">Zhaoyuan Xia <span>夏照源</span></a>
             <ul class="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#research" class="nav-link">Research</a></li>
                 <li><a href="#publications" class="nav-link">Publications</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#honors" class="nav-link">Honors</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Hi, I'm <span class="highlight">Zhaoyuan Xia</span></h1>
-                <p class="subtitle">M.S. Student in Artificial Intelligence</p>
-                <p class="institution">Peking University</p>
-                <div class="hero-links">
-                    <a href="https://github.com/X-Luffy" class="btn btn-primary" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i> Contact Me
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="images/profile.jpg" alt="Zhaoyuan Xia" class="profile-photo">
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I am a master's student at the <strong>School of Software and Microelectronics, Peking University</strong>, 
-                        specializing in Artificial Intelligence. My research interests focus on <strong>Large Language Models (LLMs)</strong> 
-                        and <strong>AI Agents</strong>.
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="eyebrow">AI Researcher · LLM Post-training</p>
+                    <h1>Zhaoyuan Xia <span>夏照源</span></h1>
+                    <p class="subtitle">M.S. Student in Artificial Intelligence at Peking University</p>
+                    <p class="hero-summary">
+                        I study how language models can read, reason over, and act on long,
+                        information-dense contexts with better evidence grounding.
                     </p>
-                    <p>
-                        I received my B.S. degree in Computer Science and Technology from <strong>Central South University</strong> in 2024. 
-                        During my undergraduate studies, I built a solid foundation in computer science through courses including 
-                        Operating Systems, Computer Networks, Data Structures, Algorithms, Machine Learning, and Computer Vision.
-                    </p>
-                    <p>
-                        Currently, I am exploring the boundaries of AI capabilities, particularly in developing intelligent agents 
-                        that can effectively interact with and reason about the world. I am passionate about bridging the gap 
-                        between academic research and practical applications.
-                    </p>
-                </div>
-                <div class="education">
-                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                    <div class="education-item">
-                        <div class="edu-degree">M.S. in Artificial Intelligence</div>
-                        <div class="edu-school">Peking University</div>
-                        <div class="edu-details">School of Software and Microelectronics</div>
-                        <div class="edu-time">2024 - 2027</div>
-                        <div class="edu-courses">
-                            <strong>Courses:</strong> Deep Learning, Natural Language Processing, Recommendation Systems
-                        </div>
-                    </div>
-                    <div class="education-item">
-                        <div class="edu-degree">B.S. in Computer Science and Technology</div>
-                        <div class="edu-school">Central South University</div>
-                        <div class="edu-details">School of Computer Science</div>
-                        <div class="edu-time">2020 - 2024</div>
-                        <div class="edu-courses">
-                            <strong>Courses:</strong> Operating Systems, Computer Networks, Data Structures, Algorithms, Machine Learning, Computer Vision
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Section -->
-    <section id="research" class="section section-gray">
-        <div class="container">
-            <h2 class="section-title">Research Interests</h2>
-            <div class="research-grid">
-                <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Large Language Models</h3>
-                    <p>Exploring the capabilities and applications of large language models in various domains, focusing on prompt engineering and optimization.</p>
-                </div>
-                <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI Agents</h3>
-                    <p>Developing intelligent agents that can autonomously perform complex tasks, including prompt optimization agents and automated systems.</p>
-                </div>
-                <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>Vision-Language Models</h3>
-                    <p>Investigating the spatio-temporal reasoning capabilities of vision-language models, particularly in geographic and urban contexts.</p>
-                </div>
-                <div class="research-card">
-                    <div class="research-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Benchmark Development</h3>
-                    <p>Creating comprehensive evaluation benchmarks to assess and improve AI model capabilities in specific domains.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Publications Section -->
-    <section id="publications" class="section">
-        <div class="container">
-            <h2 class="section-title">Publications</h2>
-            <div class="publications-list">
-                <div class="publication-item highlight-pub">
-                    <div class="pub-year">2026</div>
-                    <div class="pub-content">
-                        <div class="pub-accept"><span class="accept-badge">ICLR 2026</span></div>
-                        <h3>GTR-Bench: A Benchmark for Geographic Temporal Reasoning in Vision-Language Models</h3>
-                        <p class="pub-authors"><strong>Zhaoyuan Xia</strong>, et al.</p>
-                        <p class="pub-venue"><em>International Conference on Learning Representations (ICLR)</em></p>
-                        <div class="pub-links">
-                            <a href="https://arxiv.org/pdf/2510.07791" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                            <a href="https://github.com/X-Luffy/GTR-Bench" class="pub-link" target="_blank"><i class="fas fa-code"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section section-gray">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="experience-list">
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <div class="exp-company">
-                            <h3>Baidu Inc.</h3>
-                            <span class="exp-role">Algorithm Intern</span>
-                        </div>
-                        <span class="exp-date">Dec 2025 - Present</span>
-                    </div>
-                    <div class="exp-details">
-                        <p class="exp-dept"><i class="fas fa-building"></i> MEG Division, Basic Search Group</p>
-                        <ul>
-                            <li>Developing automated prompt optimization systems for business applications</li>
-                            <li>Researching and implementing prompt agents for automated prompt engineering</li>
-                            <li>Building production-ready systems to reduce manual prompt debugging costs</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <div class="exp-company">
-                            <h3>SenseTime</h3>
-                            <span class="exp-role">Algorithm Research Intern</span>
-                        </div>
-                        <span class="exp-date">Apr 2025 - Nov 2025</span>
-                    </div>
-                    <div class="exp-details">
-                        <p class="exp-dept"><i class="fas fa-building"></i> SCG Smart City Business Unit</p>
-                        <ul>
-                            <li>Explored the spatio-temporal intelligence boundaries of Vision-Language Models (VLMs)</li>
-                            <li>Led the research and development of <strong>GTR-Bench</strong>, a benchmark for geographic temporal reasoning</li>
-                            <li>Paper accepted to <strong>ICLR 2026</strong> and open-sourced the codebase</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <div class="exp-company">
-                            <h3>National Service Outsourcing Innovation Competition</h3>
-                            <span class="exp-role">Team Leader</span>
-                        </div>
-                        <span class="exp-date">Dec 2022 - Jun 2023</span>
-                    </div>
-                    <div class="exp-details">
-                        <p class="exp-award"><i class="fas fa-trophy"></i> <strong>National Second Prize</strong> (Enterprise Proposition Track A)</p>
-                        <p class="exp-project"><i class="fas fa-folder"></i> Project: Industrial Table Structure Recognition</p>
-                        <ul>
-                            <li>Led the team as team leader, responsible for overall project coordination</li>
-                            <li>Responsible for data construction, augmentation, and model training/fine-tuning</li>
-                            <li>Implemented full deployment pipeline including Docker, mobile app, and web interface</li>
-                            <li>Finals held at Jiangnan University, Wuxi</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>GTR-Bench</h3>
-                        <span class="project-tag">Research</span>
-                    </div>
-                    <p>A comprehensive benchmark for evaluating geographic temporal reasoning capabilities 
-                       in Vision-Language Models. Published at ICLR 2026.</p>
-                    <div class="project-tech">
-                        <span>VLM</span>
-                        <span>Benchmark</span>
-                        <span>Spatio-temporal</span>
-                    </div>
-                    <a href="https://github.com/X-Luffy/GTR-Bench" class="project-link" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>PEAgent</h3>
-                        <span class="project-tag">Research</span>
-                    </div>
-                    <p>A research project exploring prompt engineering and AI agent capabilities. 
-                       Focus on developing intelligent systems for automated prompt optimization.</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>LLM</span>
-                        <span>AI Agent</span>
-                    </div>
-                    <a href="https://github.com/X-Luffy/PEAgent" class="project-link" target="_blank">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Table Structure Recognition</h3>
-                        <span class="project-tag">Competition</span>
-                    </div>
-                    <p>Industrial table structure recognition system with full deployment pipeline. 
-                       National Second Prize in Service Outsourcing Innovation Competition.</p>
-                    <div class="project-tech">
-                        <span>Deep Learning</span>
-                        <span>Docker</span>
-                        <span>Full-stack</span>
-                    </div>
-                    <div class="project-link" style="color: var(--text-light);">
-                        <i class="fas fa-trophy"></i> National Second Prize
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section section-gray">
-        <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>2401210464@stu.pku.edu.cn</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>School of Software and Microelectronics<br>Peking University, Beijing, China</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="social-links">
-                    <h4>Connect with me</h4>
-                    <div class="social-icons">
-                        <a href="https://github.com/X-Luffy" target="_blank" title="GitHub">
-                            <i class="fab fa-github"></i>
+                    <div class="hero-links">
+                        <a href="https://github.com/X-Luffy" class="btn btn-primary" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> GitHub
                         </a>
-                        <a href="https://scholar.google.com" target="_blank" title="Google Scholar">
+                        <a href="#publications" class="btn btn-secondary">
+                            <i class="fas fa-arrow-down"></i> Selected work
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="portrait-frame">
+                        <img src="images/profile.jpg" alt="Portrait of Zhaoyuan Xia" class="profile-photo">
+                        <div class="portrait-caption">
+                            <span class="status-dot"></span>
+                            <span>Building reliable long-context systems</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="focus-strip">
+                <div>
+                    <span class="focus-label">01</span>
+                    <strong>Long-context reasoning</strong>
+                </div>
+                <div>
+                    <span class="focus-label">02</span>
+                    <strong>LLM post-training</strong>
+                </div>
+                <div>
+                    <span class="focus-label">03</span>
+                    <strong>AI agents</strong>
+                </div>
+                <div>
+                    <span class="focus-label">04</span>
+                    <strong>VLM evaluation</strong>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Profile</p>
+                    <h2>About me</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I am a master's student in Artificial Intelligence at the
+                            <strong>School of Software and Microelectronics, Peking University</strong>.
+                            My current work focuses on long-context understanding, model post-training,
+                            and evaluation for language and vision-language models.
+                        </p>
+                        <p>
+                            I am currently an algorithm intern at <strong>Baidu</strong>, where I work
+                            on long-context post-training for foundation models. Previously, I worked
+                            on prompt optimization agents at Baidu and geo-temporal reasoning
+                            benchmarks for vision-language models at <strong>SenseTime</strong>.
+                        </p>
+                        <p>
+                            I received my B.S. in Computer Science and Technology from
+                            <strong>Central South University</strong> in 2024.
+                        </p>
+                    </div>
+                    <aside class="education-panel">
+                        <div class="panel-heading">
                             <i class="fas fa-graduation-cap"></i>
+                            <h3>Education</h3>
+                        </div>
+                        <div class="education-item">
+                            <div class="item-topline">
+                                <strong>Peking University</strong>
+                                <span>2024–2027</span>
+                            </div>
+                            <p>M.S. in Artificial Intelligence</p>
+                            <small>School of Software and Microelectronics</small>
+                        </div>
+                        <div class="education-item">
+                            <div class="item-topline">
+                                <strong>Central South University</strong>
+                                <span>2020–2024</span>
+                            </div>
+                            <p>B.S. in Computer Science and Technology</p>
+                            <small>School of Computer Science</small>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="section section-muted">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">What I work on</p>
+                    <h2>Research interests</h2>
+                </div>
+                <div class="research-grid">
+                    <article class="research-card">
+                        <div class="research-icon"><i class="fas fa-book-open"></i></div>
+                        <h3>Long-context understanding</h3>
+                        <p>Evidence retrieval, information compression, citation grounding, and multi-document reasoning.</p>
+                    </article>
+                    <article class="research-card">
+                        <div class="research-icon"><i class="fas fa-sliders"></i></div>
+                        <h3>LLM post-training</h3>
+                        <p>SFT, GRPO, process rewards, and length curriculum for more capable and controllable language models.</p>
+                    </article>
+                    <article class="research-card">
+                        <div class="research-icon"><i class="fas fa-robot"></i></div>
+                        <h3>AI agents</h3>
+                        <p>Self-evolving prompt optimization systems that diagnose errors, test hypotheses, and reuse experience.</p>
+                    </article>
+                    <article class="research-card">
+                        <div class="research-icon"><i class="fas fa-map-location-dot"></i></div>
+                        <h3>VLM evaluation</h3>
+                        <p>Benchmarks and analysis for geographic, temporal, and cross-view reasoning in vision-language models.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Selected work</p>
+                    <h2>Publications</h2>
+                </div>
+                <div class="publications-list">
+                    <article class="publication-item featured-publication">
+                        <div class="pub-year">2026</div>
+                        <div class="pub-content">
+                            <div class="pub-meta">
+                                <span class="status-badge">Preprint</span>
+                                <span>Long-context LLMs</span>
+                            </div>
+                            <h3>Highlight-Then-Summarize: Learning to Compress Evidence for Long-Context Understanding</h3>
+                            <p class="pub-authors"><strong>Zhaoyuan Xia</strong>, et al.</p>
+                            <p class="pub-description">
+                                A Question → Evidence → Summary → Answer framework that makes evidence
+                                localization and cross-span integration explicit before answering.
+                                H2S-14B reaches <strong>32.60</strong> average on H2S-Bench.
+                            </p>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/abs/2609.31382" target="_blank" rel="noopener">
+                                    <i class="fas fa-file-lines"></i> Paper
+                                </a>
+                                <a href="https://github.com/X-Luffy/Highlight-Then-Summarize" target="_blank" rel="noopener">
+                                    <i class="fas fa-code"></i> Code
+                                </a>
+                                <a href="https://huggingface.co/datasets/H2S-Research/Highlight-Then-Summarize" target="_blank" rel="noopener">
+                                    <i class="fas fa-database"></i> Dataset
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="publication-item">
+                        <div class="pub-year">2026</div>
+                        <div class="pub-content">
+                            <div class="pub-meta">
+                                <span class="status-badge accepted">ICLR 2026</span>
+                                <span>Co-first author</span>
+                            </div>
+                            <h3>GTR-Bench: Evaluating Geo-Temporal Reasoning in Vision-Language Models</h3>
+                            <p class="pub-authors"><strong>Zhaoyuan Xia</strong>, et al.</p>
+                            <p class="pub-description">
+                                A benchmark for geographic and temporal reasoning across maps, videos,
+                                multiple camera views, and unobserved regions.
+                            </p>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/abs/2510.07791" target="_blank" rel="noopener">
+                                    <i class="fas fa-file-lines"></i> Paper
+                                </a>
+                                <a href="https://github.com/X-Luffy/GTR-Bench" target="_blank" rel="noopener">
+                                    <i class="fas fa-code"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section section-muted">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Where I have worked</p>
+                    <h2>Experience</h2>
+                </div>
+                <div class="experience-list">
+                    <article class="experience-item">
+                        <div class="exp-header">
+                            <div>
+                                <h3>Baidu · Wenxin Foundation Model</h3>
+                                <p class="exp-role">Algorithm Intern · Long-context post-training</p>
+                            </div>
+                            <span class="exp-date">May 2026 – Present</span>
+                        </div>
+                        <ul>
+                            <li>Proposed the H2S reading paradigm and made evidence localization, summarization, and answer generation explicit in one autoregressive trajectory.</li>
+                            <li>Built a 6,647-example dataset with 4,228 SFT and 2,419 RL samples across 11 benchmark families.</li>
+                            <li>Trained and evaluated 7B/14B models; H2S-14B scored 32.60 average, outperforming QwenLong-L1-32B by 5.01 points.</li>
+                        </ul>
+                    </article>
+
+                    <article class="experience-item">
+                        <div class="exp-header">
+                            <div>
+                                <h3>Baidu · Mobile Ecosystem Group</h3>
+                                <p class="exp-role">Algorithm Intern · Basic search</p>
+                            </div>
+                            <span class="exp-date">Dec 2025 – May 2026</span>
+                        </div>
+                        <ul>
+                            <li>Built PEAgent, a self-evolving prompt optimization system with error clustering, hypothesis testing, slot-level edits, rollback, and candidate selection.</li>
+                            <li>Designed teacher–student collaboration between strong models for diagnosis and planning and efficient models for batch evaluation.</li>
+                            <li>Improved authority, satisfaction, and relevance metrics by 10.5, 13.3, and 4.0 percentage points and helped launch the internal platform.</li>
+                        </ul>
+                    </article>
+
+                    <article class="experience-item">
+                        <div class="exp-header">
+                            <div>
+                                <h3>SenseTime · Smart City Group</h3>
+                                <p class="exp-role">Algorithm Research Intern · Multimodal AI</p>
+                            </div>
+                            <span class="exp-date">Apr 2025 – Nov 2025</span>
+                        </div>
+                        <ul>
+                            <li>Led the development of GTR-Bench for geo-temporal reasoning across maps, videos, and non-overlapping camera views.</li>
+                            <li>Evaluated more than 10 mainstream VLMs and analyzed gaps in spatial-temporal utilization, temporal prediction, and cross-view alignment.</li>
+                            <li>The work was published at ICLR 2026 and released with an open-source codebase.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Selected projects</p>
+                    <h2>Projects</h2>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <span class="project-kicker">Open source · 2026</span>
+                                <h3>Highlight-Then-Summarize</h3>
+                            </div>
+                            <i class="fas fa-compress"></i>
+                        </div>
+                        <p>Long-context post-training framework and dataset for compressing distributed evidence before answering.</p>
+                        <div class="project-tech"><span>LLM</span><span>GRPO</span><span>128K context</span></div>
+                        <a href="https://github.com/X-Luffy/Highlight-Then-Summarize" target="_blank" rel="noopener" class="project-link">
+                            View project <i class="fas fa-arrow-up-right-from-square"></i>
                         </a>
-                        <a href="https://arxiv.org/a/xia_z_1" target="_blank" title="arXiv">
-                            <i class="fas fa-file-alt"></i>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <span class="project-kicker">Research · ICLR 2026</span>
+                                <h3>GTR-Bench</h3>
+                            </div>
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <p>Benchmarking geographic and temporal reasoning in vision-language models across multi-view environments.</p>
+                        <div class="project-tech"><span>VLM</span><span>Benchmark</span><span>Video + map</span></div>
+                        <a href="https://github.com/X-Luffy/GTR-Bench" target="_blank" rel="noopener" class="project-link">
+                            View project <i class="fas fa-arrow-up-right-from-square"></i>
                         </a>
-                        <a href="mailto:2401210464@stu.pku.edu.cn" title="Email">
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <span class="project-kicker">Industry research</span>
+                                <h3>PEAgent</h3>
+                            </div>
+                            <i class="fas fa-wand-magic-sparkles"></i>
+                        </div>
+                        <p>A prompt optimization agent that turns model errors into testable hypotheses and iterative improvements.</p>
+                        <div class="project-tech"><span>Agents</span><span>Prompt optimization</span><span>Evaluation</span></div>
+                        <span class="project-note"><i class="fas fa-building"></i> Deployed internally</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="honors" class="section section-muted">
+            <div class="container narrow-container">
+                <div class="section-heading">
+                    <p class="eyebrow">Beyond research</p>
+                    <h2>Honors</h2>
+                </div>
+                <div class="honors-list">
+                    <div class="honor-item"><span>2026</span><strong>ICLR 2026 · GTR-Bench</strong><small>Co-first author</small></div>
+                    <div class="honor-item"><span>2023</span><strong>National Second Prize · Service Outsourcing Innovation Competition</strong><small>Team leader</small></div>
+                    <div class="honor-item"><span>2023</span><strong>Peking University Challenge Cup · First Prize</strong><small>Special contribution track</small></div>
+                    <div class="honor-item"><span>—</span><strong>Peking University “Lixing” Program · Outstanding Individual</strong><small>Undergraduate honors</small></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <div>
+                        <p class="eyebrow">Get in touch</p>
+                        <h2>Let’s talk about<br><span>reliable AI systems.</span></h2>
+                        <p class="contact-copy">
+                            I am interested in long-context reasoning, post-training, evaluation,
+                            and practical systems that make model behavior easier to inspect.
+                        </p>
+                    </div>
+                    <div class="contact-details">
+                        <a href="mailto:2401210464@stu.pku.edu.cn" class="contact-link">
                             <i class="fas fa-envelope"></i>
+                            <span>2401210464@stu.pku.edu.cn</span>
                         </a>
+                        <p class="location-line"><i class="fas fa-location-dot"></i> Beijing, China</p>
+                        <div class="social-icons">
+                            <a href="https://github.com/X-Luffy" target="_blank" rel="noopener" title="GitHub">
+                                <i class="fab fa-github"></i><span class="sr-only">GitHub</span>
+                            </a>
+                            <a href="https://arxiv.org/abs/2609.31382" target="_blank" rel="noopener" title="arXiv">
+                                <i class="fas fa-file-lines"></i><span class="sr-only">arXiv</span>
+                            </a>
+                            <a href="mailto:2401210464@stu.pku.edu.cn" title="Email">
+                                <i class="fas fa-envelope"></i><span class="sr-only">Email</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Zhaoyuan Xia. All rights reserved.</p>
-            <p class="footer-note">Built with <i class="fas fa-heart"></i> using GitHub Pages</p>
+            <p>© 2026 Zhaoyuan Xia. Built with GitHub Pages.</p>
         </div>
     </footer>
 
-    <!-- Smooth Scroll & Mobile Menu Script -->
     <script>
-        // Mobile menu toggle
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
 
         hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
+            const isOpen = hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', String(isOpen));
         });
 
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-link').forEach(link => {
+        document.querySelectorAll('.nav-link').forEach((link) => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
             });
         });
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener('click', (event) => {
+                const target = document.querySelector(anchor.getAttribute('href'));
+                if (!target) return;
+                event.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
 
-        // Navbar background on scroll
         window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            } else {
-                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.boxShadow = 'none';
-            }
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 20);
         });
     </script>
 </body>
