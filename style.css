@@ -217,7 +217,38 @@ main {
     grid-template-columns: minmax(0, 1fr) 220px;
     gap: 2.8rem;
     align-items: start;
+    width: min(var(--content-width), calc(100% - 48px));
+    margin: 0 auto;
     min-height: 330px;
+}
+
+.hero-proof {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: min(var(--content-width), calc(100% - 48px));
+    margin: 0 auto;
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--line);
+}
+
+.proof-item {
+    display: grid;
+    gap: 0.15rem;
+    padding-left: 1rem;
+    border-left: 2px solid #b9dfe1;
+}
+
+.proof-item strong {
+    color: var(--teal-dark);
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+}
+
+.proof-item span {
+    color: var(--soft);
+    font-size: 0.78rem;
+    font-weight: 650;
 }
 
 .eyebrow {
@@ -314,7 +345,7 @@ main {
 .portrait-frame {
     position: relative;
     width: min(220px, 100%);
-    padding: 8px 8px 38px;
+    padding: 8px 8px 0;
     border: 1px solid var(--line);
     background: var(--paper);
     box-shadow: 0 8px 20px rgba(23, 32, 51, 0.08);
@@ -330,17 +361,14 @@ main {
 }
 
 .portrait-caption {
-    position: absolute;
-    right: 8px;
-    bottom: 10px;
-    left: 8px;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    min-height: 42px;
+    padding: 0.55rem 0.15rem 0.65rem;
     color: var(--muted);
     font-size: 0.76rem;
     font-weight: 650;
-    transform: none;
 }
 
 .status-dot {
@@ -355,6 +383,8 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    width: min(var(--content-width), calc(100% - 48px));
+    margin: 0 auto;
     padding: 1rem 0;
     border-top: 1px solid var(--line);
 }
@@ -413,6 +443,23 @@ main {
 
 .about-text strong {
     color: var(--ink);
+}
+
+.skill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 1.5rem;
+}
+
+.skill-row span {
+    padding: 0.28rem 0.6rem;
+    border: 1px solid #b9dfe1;
+    border-radius: 999px;
+    color: var(--teal-dark);
+    background: #f3fbfb;
+    font-size: 0.76rem;
+    font-weight: 700;
 }
 
 .education-panel {
@@ -939,6 +986,11 @@ main {
     .hero-content {
         grid-template-columns: minmax(0, 1fr) 200px;
         gap: 3rem;
+        width: min(100% - 48px, 680px);
+    }
+
+    .hero-proof {
+        width: min(100% - 48px, 680px);
     }
 
     .hero h1 {
@@ -1023,7 +1075,23 @@ main {
         align-items: stretch;
         min-height: auto;
         gap: 2.5rem;
+        width: min(100% - 32px, 560px);
         padding-bottom: 3.5rem;
+    }
+
+    .hero-proof {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+        width: min(100% - 32px, 560px);
+    }
+
+    .proof-item {
+        grid-template-columns: 84px 1fr;
+        align-items: baseline;
+    }
+
+    .proof-item strong {
+        font-size: 1.05rem;
     }
 
     .hero-image {
@@ -1046,6 +1114,7 @@ main {
     .focus-strip {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.8rem 1rem;
+        width: min(100% - 32px, 560px);
     }
 
     .section {
